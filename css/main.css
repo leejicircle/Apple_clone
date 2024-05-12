@@ -56,7 +56,6 @@ header ul.menu > li.basket-starter > a {
 
 /* header/ basket */
 header .basket {
-  display: none;
   width: 290px;
   padding: 10px 20px;
   border: 1px solid #d2d2d2;
@@ -66,10 +65,15 @@ header .basket {
   position: absolute;
   top: calc(100% + 4px);
   right: -6px;
+  /* animation 처리를 하려면 display가 아닌 visibility 활용 */
+  visibility: hidden;
+  transition: .4s;
+  opacity: 0;
+
 }
 header .basket.show {
-  display: block;
-
+  visibility: visible;
+  opacity: 1;
 }
 header .basket .arrow {
   width: 20px;
