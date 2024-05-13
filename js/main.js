@@ -33,6 +33,7 @@ const searchWrapEl = headerEl.querySelector('.search-wrap')
 const searchStarterEl = headerEl.querySelector('.search-starter')
 const searchCloserEl = searchWrapEl.querySelector('.search-closer')
 const searchshadowEl = searchWrapEl.querySelector('.shadow')
+const searchDelayEls = [...searchWrapEl.querySelectorAll('li')]
 
 searchStarterEl.addEventListener('click', showSearch)
 searchCloserEl.addEventListener('click', hideSearch)
@@ -40,15 +41,31 @@ searchshadowEl.addEventListener('click', hideSearch)
 function showSearch() {
   headerEl.classList.add('searching')
   document.documentElement.classList.add('fixed')
-  Menudelay(headerMenuEl.reverse())
+  delaysetting(headerMenuEl.reverse())
+  delaysetting(searchDelayEls)
+  
 }
 function hideSearch() {
   headerEl.classList.remove('searching')
   document.documentElement.classList.remove('fixed')
-  Menudelay()
+  delaysetting(headerMenuEl.reverse())
+  delaysetting(searchDelayEls.reverse())
+  searchDelayEls.reverse()
+  
 }
-function Menudelay (){
-  headerMenuEl.forEach (function(el, index) {
-    el.style.transitionDelay = index * .4 / headerMenuEl.length + 's'
+// function Menudelay (){
+//   this.forEach (function(el, index) {
+//     el.style.transitionDelay = index * .4 / headerMenuEl.length + 's'
+//   })
+// }
+// function searchDelay () {
+//   searchDelayEls.forEach(function (el,index) {
+//     el.style.transitionDelay = index * .4 / headerMenuEl.length + 's'
+//   })
+// }    아래 delay setting 함수로 함치기
+function delaysetting (elements) {
+  elements.forEach(function(el, index) {
+      el.style.transitionDelay = index * .4 /elements.length +'s'
   })
+
 }
