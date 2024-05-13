@@ -33,6 +33,7 @@ header ul.menu {
 header ul.menu > li {
   display: flex;
   position: relative;
+  transition: .4s;
 }
 header ul.menu > li > a {
   padding: 0 10px;
@@ -223,5 +224,6 @@ header .search .autocompletes ul li:hover a {
   color: #0071e3;
 }
 header.searching ul.menu >li {
-  display: none;
+  opacity: 0;
+  transform: scale(.7);
 }

@@ -28,6 +28,7 @@ function hideBasket () {
 }
 // 검색 
 const headerEl = document.querySelector('header')
+const headerMenuEl = [...headerEl.querySelectorAll('ul.menu > li')] //... 전개연산자 | li태그들을 배열로 관리
 const searchWrapEl = headerEl.querySelector('.search-wrap')
 const searchStarterEl = headerEl.querySelector('.search-starter')
 const searchCloserEl = searchWrapEl.querySelector('.search-closer')
@@ -39,8 +40,15 @@ searchshadowEl.addEventListener('click', hideSearch)
 function showSearch() {
   headerEl.classList.add('searching')
   document.documentElement.classList.add('fixed')
+  Menudelay(headerMenuEl.reverse())
 }
 function hideSearch() {
   headerEl.classList.remove('searching')
   document.documentElement.classList.remove('fixed')
+  Menudelay()
+}
+function Menudelay (){
+  headerMenuEl.forEach (function(el, index) {
+    el.style.transitionDelay = index * .4 / headerMenuEl.length + 's'
+  })
 }
