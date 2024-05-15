@@ -33,6 +33,7 @@ const searchWrapEl = headerEl.querySelector('.search-wrap')
 const searchStarterEl = headerEl.querySelector('.search-starter')
 const searchCloserEl = searchWrapEl.querySelector('.search-closer')
 const searchshadowEl = searchWrapEl.querySelector('.shadow')
+const searchInputEl = searchWrapEl.querySelector('input')
 const searchDelayEls = [...searchWrapEl.querySelectorAll('li')]
 
 searchStarterEl.addEventListener('click', showSearch)
@@ -43,6 +44,10 @@ function showSearch() {
   document.documentElement.classList.add('fixed')
   delaysetting(headerMenuEl.reverse())
   delaysetting(searchDelayEls)
+ 
+  setTimeout(function () {
+    searchInputEl.focus()
+  }, 600)
   
 }
 function hideSearch() {
@@ -52,6 +57,7 @@ function hideSearch() {
   delaysetting(searchDelayEls.reverse())
   searchDelayEls.reverse()
   
+  searchInputEl.value = ''
 }
 // function Menudelay (){
 //   this.forEach (function(el, index) {
