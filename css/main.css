@@ -137,6 +137,9 @@ a.link::after {
   opacity: 1;
   transform:  translate(0, 0);
 }
+.infos--large .info {
+  max-width: 410px;
+}
 .info .icon {
   width: 100px;
   height: 100px;
@@ -169,10 +172,16 @@ a.link::after {
 .info .icon.icon--keyboard     { background-image: url("../images/sprite_keyboard.png"); }
 .info .icon.icon--notes        { background-image: url("../images/sprite_notes.png"); }
 .info .icon.icon--covers       { background-image: url("../images/sprite_covers.png"); }
+
 .info p {
   font-size: 21.5px;
   font-weight: 600;
   line-height: 1.5;
+}
+.info a.link {
+  display: block;
+  margin-top: 44px;
+  font-size: 19.5px;
 }
 
 /* header */
@@ -634,6 +643,35 @@ nav .menu li.active:hover a {
 .camera .stage figure {
   transform: translate(90px, 0);
 }
+.camera .stage video {
+  position: absolute;
+  top: 36px;
+  left: 76px;
+  /* mask-image: url('../images/camera_video_mask.png'); 접두사 필요 */
+  -webkit-mask-image: url('../images/camera_video_mask.png');
+}
+.camera .stage .controller--play,
+.camera .stage .controller--pause {
+  color: var(--color-link);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transform: translate(428px, -134px) rotate(-3deg);
+}
+.camera .stage .controller--play:hover,
+.camera .stage .controller--pause:hover {
+  text-decoration: underline;
+}
+.camera .stage .controller--play.hide,
+.camera .stage .controller--pause.hide {
+  display: none;
+} 
+.camera .stage .controller--play img,
+.camera .stage .controller--pause img {
+  width: 20px;
+  margin-top: -2px;
+} 
 .camera .stage figcaption {
   background-image: url('../images/camera_hardware_caption.png');
   width: 130px;
@@ -654,6 +692,72 @@ nav .menu li.active:hover a {
   transform: translate(27px, 905px);
 }
 
+/* wireless */
+.wireless {
+  margin-top: 202px;
+}
+.wireless .facetime h1 {
+  background-image: url('../images/wireless_headline.png');
+  width: 730px;
+  height: 330px;
+  transform: translate(104px,0);
+}
+.wireless .facetime .figures {
+  height: 773px;
+}
+.wireless .facetime figure {
+  transform: translate(-68px, 0);
+}
+.wireless .facetime figcaption {
+  background-image: url('../images/wireless_facetime_caption.png');
+  width: 139px;
+  height: 46px;
+  transform: translate(843px,-49px);
+}
+/* wireless / files */
+.wireless .files figure {
+  transform: translate(34px, -34px);
+}
+.wireless .files figcaption {
+  background-image: url('../images/wireless_files_caption.png');
+  width: 127px;
+  height: 46px;
+  transform: translate(96px, 639px);
+}
+/* accessories */
+.accessories {
+  margin-top: 195px;
+}
+.accessories h1 {
+  background-image: url('../images/accessories_headline.png');
+  width: 550px;
+  height: 343px;
+  margin: 0 auto;
+}
+.accessories .figures {
+  height: 1021px;
+  margin-top: 34px;
+}
+.accessories figure {
+  transform: translate(-24px, 0);
+}
+.accessories figcaption .caption-memo {
+  background-image: url('../images/accessories_caption_memo.png');
+  width: 169px;
+  height: 41px;
+  transform: translate(790px, -52px);
+}
+.accessories figcaption .caption-supports {
+  background-image: url('../images/accessories_caption_supports.png');
+  width: 200px;
+  height: 70px;
+  transform: translate(163px, 812px);
+} 
+.accessories .infos {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
 @keyframes sprite-icon {
   /* 1~10 */
