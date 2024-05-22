@@ -908,6 +908,23 @@ nav .menu li.active:hover a {
   height: 31px;
   transform: translate(533px, 485px);
 }
+
+/* Accessibility */
+.accesibility {
+  margin-top: 266px;
+  margin-bottom: 170px;
+}
+.accesibility h1 {
+  background-image: url('../images/accessibility_headline.png');
+  width: 384px;
+  height: 270px;
+}
+.accesibility .infos {
+  margin-top: 20px;
+}
+.accesibility figure {
+  transform: translate(470px, -620px);
+}
 @keyframes sprite-icon {
   /* 1~10 */
   0.00% { background-position: 0 0; }
