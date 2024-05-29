@@ -1116,6 +1116,41 @@ footer .warning li {
   line-height: 1.5;
   color: var(--color-font-darkgray);
 }
+/* footer /breadcrumbs */
+footer .breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 20px 0;
+}
+footer .breadcrumbs a {
+  font-size: 12px;
+  color: var(--color-font-darkgray);
+  position: relative;
+}
+footer .breadcrumbs a:hover {
+  text-decoration: underline;
+}
+footer .breadcrumbs a::after {
+  content: "";
+  background-image: url("../images/path_div.svg");
+  width: 8px;
+  height: 18px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -18px;
+  margin: auto;
+}
+footer .breadcrumbs a:last-child:after {
+  display: none;
+}
+footer .breadcrumbs a.apple-logo {
+  background-image: url("../images/path_apple.svg");
+  width: 16px;
+  height: 16px;
+  
+}
 @keyframes sprite-icon {
   /* 1~10 */
   0.00% { background-position: 0 0; }
