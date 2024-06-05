@@ -2205,10 +2205,41 @@ main {
 }
 
 @media (max-width:1000px) {
-
+  .accesibility {
+    margin-top: 86px;
+    margin-bottom: 120px;
+  }
+  .accesibility h1 {
+    width: 287px;
+    height: 205px;
+  }
+  .accesibility .info {
+    max-width: 346px;
+  }
+  .accesibility figure {
+    transform: translate(401px, -504px);
+  }
+  .accesibility figure img {
+    width: 329px;
+  }
 }
 @media (max-width:740px) {
-  
+  .accesibility {
+    margin-top: 50px;
+  }
+  .accesibility h1 {
+    height: 165px;
+    margin: 0 auto;
+  }
+  .accesibility .info {
+    max-width: none;
+  }
+  .accesibility .fiures {
+    margin-top: 30px;
+  }
+  .accesibility figure {
+    transform: translate(20px, 0px);
+  }
 }
 /* AR */
 .ar {
